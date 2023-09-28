@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalcularTriangulo_DLL.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/Css/MapsStyle.css"/>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Frame StyleClass="titulo">
+            <Label Text="Hello, Rafiki!" HorizontalTextAlignment="Center" StyleId="rafiki"/>
+        </Frame>
+        <StackLayout Padding="10, 10, 10, 10">
+            <Grid>
+                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" Text="Base"/>
+                <Entry Grid.Column="1" Grid.Row="0" Margin="-80,0,0,0" Placeholder="Base(cm)" x:Name="Base" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" Text="Lado1"/>
+                <Entry Grid.Column="1" Grid.Row="1" Margin="-80,0,0,0" Placeholder="Lado1(cm)" x:Name="Lado1" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" Text="Lado2"/>
+                <Entry Grid.Column="1" Grid.Row="2" Margin="-80,0,0,0" Placeholder="Lado2(cm)" x:Name="Lado2" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" Text="Altura"/>
+                <Entry Grid.Column="1" Grid.Row="3" Margin="-80,0,0,0" Placeholder="Altura(cm)" x:Name="Altura" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" Text="Area"/>
+                <Entry Grid.Column="1" Grid.Row="4" Margin="-80,0,0,0" Placeholder="Area(cm)" x:Name="Area" Keyboard="Numeric" IsEnabled="False"/>
+                <Button Grid.ColumnSpan="2" Grid.Row="5" CornerRadius="5" Text="Calcular Area" Clicked="Button_Clicked"/>
+            </Grid>
+
+            <Image Source="TrianguloEquilatero.png" HeightRequest="180" x:Name="imgEquilatero" IsVisible="false"/>
+            <Image Source="TrianguloEscaleno.png" HeightRequest="180" x:Name="imgEscaleno" IsVisible="false"/>
+            <Image Source="TrianguloIsosceles.png" HeightRequest="180" x:Name="imgIsoceles" IsVisible="false"/>
+        </StackLayout>
+
+
+
+    </StackLayout>
+
+</ContentPage>
